@@ -60,7 +60,7 @@ flowchart TD
 ---
 
 ## 👤 Tim & Kontribusi
-Dikembangkan oleh [Nama Anda].
+Dikembangkan oleh [Muhammad Chaska Syahdiladarama].
 Kontribusi, saran, dan pull request sangat terbuka!
 
 ---
