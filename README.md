@@ -64,3 +64,67 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+# McRifle
+
+McRifle adalah aplikasi web katalog dan penjualan produk senjata replika, aksesoris, serta layanan custom order. Dibangun menggunakan Laravel.
+
+## Fitur Utama
+- Daftar produk dengan filter kategori dan rentang harga
+- Keranjang belanja (add, remove, checkout)
+- Riwayat pembelian dan invoice (dapat diunduh PDF)
+- Custom order produk
+- Halaman tentang, kontak, dan newsletter
+- Autentikasi user dan admin
+- Manajemen produk (admin)
+
+## Flowchart Aplikasi
+
+```mermaid
+flowchart TD
+    A["User membuka website McRifle"] --> B["User melihat daftar produk"]
+    B --> C["User memilih produk"]
+    C --> D["User dapat menambah produk ke keranjang"]
+    D --> E["User melihat isi keranjang"]
+    E --> F["User dapat menghapus produk dari keranjang"]
+    E --> G["User dapat membeli produk"]
+    G --> H["Sistem membuat invoice dan menyimpan riwayat pembelian"]
+    H --> I["User dapat melihat dan mengunduh invoice"]
+    B --> J["User dapat memfilter produk berdasarkan kategori dan harga"]
+    A --> K["User dapat mengakses halaman tentang, kontak, dan custom order"]
+```
+
+## Instruksi Instalasi
+
+1. **Clone repository**
+   ```bash
+   git clone https://github.com/USERNAME/McRifle.git
+   cd McRifle
+   ```
+2. **Install dependency PHP & JS**
+   ```bash
+   composer install
+   npm install
+   npm run build
+   ```
+3. **Copy file environment**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+4. **Set konfigurasi database**
+   - Edit file `.env` dan sesuaikan DB_DATABASE, DB_USERNAME, DB_PASSWORD
+5. **Migrasi database**
+   ```bash
+   php artisan migrate
+   ```
+6. **Jalankan server lokal**
+   ```bash
+   php artisan serve
+   ```
+
+Akses aplikasi di [http://localhost:8000](http://localhost:8000)
+
+---
+
+> Dibuat dengan Laravel. Untuk kontribusi, silakan buat pull request atau hubungi admin.
